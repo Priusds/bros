@@ -1,19 +1,20 @@
 from distutils.core import setup
 
+package_dir = {
+    "bros.bros": "bros",
+    "bros.lightning_modules": "lightning_modules",
+    "bros.model": "model",
+    "bros.preprocess": "preprocess",
+    "bros.utils": "utils"
+}
+
 setup(
     name='BROS',
     version='0.1',
     license="Apache-2.0",
     description='BERT Relying On Spatiality',
-    packages_dir=  {
-        "bros.train": "train.py",
-        "bros.evaluate": "evaluate.py",
-        "bros.bros": "bros",
-        "bros.lightning_modules": "lightning_modules",
-        "bros.model": "model",
-        "bros.preprocess": "preprocess",
-        "bros.utils": "utils"
-    },
+    packages = list(package_dir.keys()),
+    package_dir= package_dir,
     install_requires = [
         "nptyping >= 1.4.2",
         "numpy >= 1.20.3",
