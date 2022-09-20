@@ -1,5 +1,11 @@
 # BROS
 
+This is a fork of the BROS implementation at
+https://github.com/clovaai/bros, packaged to be installable as a
+library via pip.  To install it, type
+
+    pip install git+https://github.com/Priusds/bros.git
+
 ## Introduction
 
 BROS (BERT Relying On Spatiality) is a pre-trained language model focusing on text and layout for better key information extraction from documents.
